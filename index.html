@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATION</title>
+</head>
+<body>
+    <button>TOggle</button>
+    <div id="container">
+        
+        <div class="box">
+            <p>first</p>
+        </div>
+        <div class="second">
+            <p>second</p>
+        </div>
+        <div class="third">
+            <p>third</p>
+        </div>
+    </div>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #container{
+            background-color:black;
+            height: 100vh;
+            color:white;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        button{
+            color: red;
+        }
+        button:hover{
+            /* transform:translateX(35em) ; */
+            /* transition: all 5s linear; */
+            color:yellow
+        }
+        .box{
+            border: .2em ridge pink;
+            width:20%;
+            padding: 2em;
+            height: 20%;
+            transition: all 2s linear;
+            animation: motion .2s linear infinite;
+        }
+        @keyframes motion {
+            0%{
+                transform: translateX(10em);
+            }
+            5%{
+                transform: translateY(10em);
+            }
+            10%{
+                background-color: red;
+                transform: rotateZ('20deg');
+            }
+            15%{
+                transform: scale(0.1);
+                background-color: blue;
+            }
+            
+        }
+        .second{
+            border: .2em double green;
+            border-radius: 20em;
+            width:20%;
+            padding: 2em;
+            height: 20%;
+        }
+        .third{
+            border: .2em dashed orange;
+            width:20%;
+            padding: 2em;
+            height: 20%;
+        }
+
+    </style>
+</body>
+</html>
